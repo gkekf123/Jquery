@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+  </head>
+  <body>
+    <button id="btn" class="btn btn-default">클래스 제어 테스트</button>
+
+    <script>
+      // js classList - 명칭 변경
+      document.getElementById("btn").classList.add("xxx");
+      document.getElementById("btn").classList.remove("btn");
+
+      // jquery
+      $("#id").addClass("xxx");
+      $("#id").remove("btn");
+
+      // 값 얻기
+      console.log($("#id").addClass("xxx"));
+      console.log($("#id").remove("btn"));
+    </script>
+
+    <button id="toggle" class="dark">토글 형식</button>
+
+    <script>
+      // jquery - 있으면 제거, 없으면 추가
+      $("#toggle").click(function () {
+        // js
+        // document.getElementById("toggle").classList.toggle("aaa");
+
+        // jquery
+        $("#toggle").toggleClass("aaa");
+      });
+    </script>
+  </body>
+</html>
